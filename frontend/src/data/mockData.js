@@ -1,74 +1,131 @@
+import { MapPin, Shield, PartyPopper, Camera } from 'lucide-react';
+
 export const mockData = {
   navigation: [
-    { id: 'plats', label: 'Plats' },
-    { id: 'regler', label: 'Regler' },
-    { id: 'om-eventet', label: 'Om Eventet' },
-    { id: 'bilder', label: 'Bilder' }
+    { id: 'home', label: 'Hem', path: '/' },
+    { id: 'plats', label: 'Plats', path: '/plats' },
+    { id: 'regler', label: 'Regler', path: '/regler' },
+    { id: 'om-eventet', label: 'Om Eventet', path: '/om-eventet' },
+    { id: 'bilder', label: 'Bilder', path: '/bilder' }
   ],
   
   celebrants: [
-    'Elton Rönngren',
-    'Julius Engvall', 
-    'Lennon Rogalin'
+    'ELTON RÖNNGREN',
+    'JULIUS ENGVALL', 
+    'LENNON ROGALIN'
+  ],
+  
+  // Club/Party Background Images
+  backgroundImages: [
+    'https://images.pexels.com/photos/3358313/pexels-photo-3358313.jpeg',
+    'https://images.pexels.com/photos/1555900/pexels-photo-1555900.jpeg',
+    'https://images.unsplash.com/photo-1608433348878-e43dea08b910',
+    'https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg',
+    'https://images.pexels.com/photos/19551009/pexels-photo-19551009.jpeg'
   ],
   
   heroImages: [
-    'hero-party-1.jpg',
-    'hero-party-2.jpg',
-    'hero-party-3.jpg'
+    'https://images.pexels.com/photos/697244/pexels-photo-697244.jpeg',
+    'https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg',
+    'https://images.pexels.com/photos/19551009/pexels-photo-19551009.jpeg'
+  ],
+  
+  previewCards: [
+    {
+      title: 'PLATS',
+      description: 'Hitta vägen till EPICENTER',
+      icon: <MapPin size={48} />,
+      link: '/plats'
+    },
+    {
+      title: 'REGLER',
+      description: 'Spelregler för natten',
+      icon: <Shield size={48} />,
+      link: '/regler'
+    },
+    {
+      title: 'EVENTET',
+      description: 'Allt om festen',
+      icon: <PartyPopper size={48} />,
+      link: '/om-eventet'
+    },
+    {
+      title: 'BILDER',
+      description: 'Våra tre kungar',
+      icon: <Camera size={48} />,
+      link: '/bilder'
+    }
   ],
   
   rules: [
     {
-      title: 'Ingen alkohol utifrån',
-      description: 'Ta inte med alkohol - det finns där! Vi har allt ni behöver i baren.'
+      title: 'INGEN ALKOHOL UTIFRÅN',
+      description: 'Vi har allt du behöver i baren! 🍻',
+      emoji: '🚫🍷',
+      color: 'from-neon-pink to-neon-purple'
     },
     {
-      title: 'Bara bjudna gäster',
-      description: 'Ta inte med folk som inte är bjudna. Vi har en gästlista och begränsad plats.'
+      title: 'BARA BJUDNA GÄSTER',
+      description: 'Gästlistan är helig - respektera den! 📝',
+      emoji: '👥',
+      color: 'from-neon-cyan to-neon-green'
     },
     {
-      title: 'Inga droger',
-      description: 'Nolltolerans mot droger. Bli utslängd direkt om du bryter mot detta.'
+      title: 'NOLLTOLERANS MOT DROGER',
+      description: 'Instant utslängning - no exceptions! ❌',
+      emoji: '🚫💊',
+      color: 'from-neon-yellow to-neon-pink'
     },
     {
-      title: 'Inga bråk',
-      description: 'Håll stämningen glad och positiv. Vakter finns på plats för att hålla ordning.'
+      title: 'INGA BRÅK',
+      description: 'Good vibes only - vakter finns överallt! ✨',
+      emoji: '☮️',
+      color: 'from-neon-green to-neon-cyan'
     },
     {
-      title: 'Var schysst',
-      description: 'Respektera lokalen, personalen och varandra. Vi är här för att ha kul!'
+      title: 'RESPEKTERA LOKALEN',
+      description: 'Så vi får komma tillbaka nästa år! 🏠',
+      emoji: '🏘️',
+      color: 'from-neon-purple to-neon-yellow'
     },
     {
-      title: 'Ha kul!',
-      description: 'Det viktigaste av allt - njut av kvällen och fira med oss! 🎉'
+      title: 'HA KUL!!!',
+      description: 'Det viktigaste av allt - PARTY HARD! 🎉',
+      emoji: '🎊',
+      color: 'from-neon-pink to-neon-cyan'
     }
   ],
   
   placeholderImages: [
     {
-      title: 'Elton',
-      description: 'Vår första kung som fyller 18!'
+      title: 'ELTON',
+      description: 'The First King 👑',
+      placeholder: 'E'
     },
     {
-      title: 'Julius',
-      description: 'Från Franska Skolan Gymnasiet'
+      title: 'JULIUS',
+      description: 'Franska Skolan Legend 🎓',
+      placeholder: 'J'
     },
     {
-      title: 'Lennon',
-      description: 'Också från Franska Skolan'
+      title: 'LENNON',
+      description: 'The Party Machine 🎵',
+      placeholder: 'L'
     },
     {
-      title: 'Trio-bild',
-      description: 'De tre vännerna tillsammans'
+      title: 'TRIO POWER',
+      description: 'Together We Rule 🔥',
+      placeholder: 'EJL'
     },
     {
-      title: 'Festbild',
-      description: 'Förhandsvisning av festen'
+      title: 'PARTY PREVIEW',
+      description: 'What to Expect 🎊',
+      placeholder: '🎉'
     },
     {
-      title: 'Lokalen',
-      description: 'Vår fantastiska festlokal'
+      title: 'THE VENUE',
+      description: 'Our Kingdom 🏰',
+      placeholder: '🏠'
     }
   ]
 };
